@@ -2,14 +2,14 @@
 - name: Importing app_setup
   ansible.builtin.import_role:
     name: common
-    tasks_from: app_setup.yaml
+    tasks_from: app-setup.yaml
   #tags:
   #- deployment
 
 - name: Importing Nodejs_setup
   ansible.builtin.import_role:
     name: common
-    tasks_from: nodejs_setup.yaml
+    tasks_from: nodejs.yaml
   #tags:
   #- deployment 
 
@@ -29,7 +29,7 @@
 
 - name: Loading data to mongodb
   ansible.builtin.shell: mongosh --host {{ mongodb_domain_name }} </app/db/master-data.js
-  when: catalogue_output.stdout | int == 0  # | converts previous output into int 
+  when: catalogue_output.stdout | int < 0  # | converts previous output into int 
 
 - name: app setup
   ansible.builtin.import_role:
