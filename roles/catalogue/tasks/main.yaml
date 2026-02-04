@@ -1,17 +1,32 @@
 ---
-- name: Importing app_setup
+- name: app setup
   ansible.builtin.import_role:
     name: common
-    tasks_from: app_setup.yaml
-  #tags:
-  #- deployment
+    tasks_from: app-setup.yaml
+  tags:
+  - deployment
 
-- name: Importing Nodejs_setup
-  ansible.builtin.import_role:
+- name: app setup
+  #ansible.builtin.import_role:
+  ansible.builtin.include_role:
     name: common
-    tasks_from: nodejs_setup.yaml
-  #tags:
-  #- deployment 
+    tasks_from: nodejs.yaml
+  tags:
+  - deployment
+
+# - name: Importing app_setup
+#   ansible.builtin.import_role:
+#     name: common
+#     tasks_from: app_setup.yaml
+#   #tags:
+#   #- deployment
+
+# - name: Importing Nodejs_setup
+#   ansible.builtin.import_role:
+#     name: common
+#     tasks_from: nodejs_setup.yaml
+#   #tags:
+#   #- deployment 
 
 - name: copying Mongodb repo
   ansible.builtin.copy:
