@@ -4,7 +4,7 @@
     system: true
     shell: /sbin/nologin
     home: /app
-    comments: roboshop system user
+    comment: roboshop system user
 
 - name: removing app directory
   ansible.builtin.file:
