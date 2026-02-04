@@ -1,0 +1,6 @@
+---
+- name: Installing {{component}}
+  hosts: {{component}}
+  become: true
+  roles:
+  - {{component}}

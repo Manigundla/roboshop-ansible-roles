@@ -1,0 +1,11 @@
+catalogue_domain_name: catalogue.chainverse.online 
+domain_name: chainverse.online 
+mongodb_domain_name: mongodb.chainverse.online
+redis_domain_name: redis.chainverse.online
+rabbitmq_domain_name: rabbitmq.chainverse.online
+mysql_domain_name: mysql.chainverse.online
+user_domain_name: user.chainverse.online
+cart_domain_name: cart.chainverse.online
+shipping_domain_name: shipping.chainverse.online
+payment_domain_name: payment.hainverse.online
+dispatch_domain_name: dispacth.chainverse.online
