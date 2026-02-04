@@ -40,10 +40,6 @@
   ansible.builtin.template:
     src: web_configuration.j2
     dest: /etc/nginx/nginx.conf
-  #notiy: restart
+  notiy: restart
 
-- name: starting and enabling web
-  ansible.builtin.service:
-    name: nginx
-    state: started
-    enabled: true
+e
