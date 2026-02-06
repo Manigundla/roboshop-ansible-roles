@@ -3,7 +3,6 @@
   ansible.builtin.copy:
     src: rabbitmq.repo
     dest: /etc/yum.repos.d/rabbitmq.repo
-    remote_src: true
 
 - name: Installing rabbitmq 
   ansible.builtin.dnf:
