@@ -7,5 +7,5 @@ mysql_domain_name: mysql.chainverse.online
 user_domain_name: user.chainverse.online
 cart_domain_name: cart.chainverse.online
 shipping_domain_name: shipping.chainverse.online
-payment_domain_name: payment.hainverse.online
+payment_domain_name: payment.chainverse.online
 dispatch_domain_name: dispacth.chainverse.online
