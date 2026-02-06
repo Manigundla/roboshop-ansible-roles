@@ -8,7 +8,7 @@
 - name: Installing redis
   ansible.builtin.dnf:
     name: redis
-    state: true
+    state: present
 
 - name: changing redis config
   ansible.builtin.replace:
